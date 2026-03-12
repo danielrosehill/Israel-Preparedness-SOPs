@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(typst compile*)",
+      "Bash(./build.sh)",
+      "Bash(pdfunite*)",
+      "Bash(pdfinfo*)",
+      "Bash(ls *)",
+      "Bash(mkdir *)"
+    ]
+  }
+}
