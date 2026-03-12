@@ -131,5 +131,17 @@
 
 #v(1fr)
 #line(length: 100%, stroke: 0.5pt + rgb("#cccccc"))
-#v(0.2em)
-#text(size: 6.5pt, fill: rgb("#888888"))[*DISCLAIMER:* This is NOT an official government resource. Use at your own risk. Based on Home Front Command (Pikud HaOref) guidelines. For official guidance visit oref.org.il. Wait 10 minutes after alert.]
+#v(0.15em)
+#grid(
+  columns: (1fr, 2.2cm),
+  gutter: 0.4em,
+  [
+    #text(size: 6.5pt, fill: rgb("#888888"))[
+      *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
+      *DISCLAIMER:* This is NOT an official government resource. Use at your own risk. Guidance based on Home Front Command (Pikud HaOref) publications as of 12 March 2026. For official guidance visit oref.org.il.
+    ]
+  ],
+  align(right + bottom)[
+    #image("../assets/image.png", width: 2cm)
+  ],
+)

@@ -63,22 +63,35 @@ typst/
   mobility-limited-posture.typ
   siren-responses.typ
   siren-responses-with-infant.typ
-output/                              # Generated PDFs (A4)
+assets/
+  image.png                          # ביחד ננצח | עם ישראל חי
+output/
+  readiness-postures/                # Generated PDFs (A4)
+  siren-responses/
 ```
 
 ## Building the PDFs
 
-Requires [Typst](https://typst.app/) installed:
+Requires [Typst](https://typst.app/) installed. Must use `--root .` from the repo root so Typst can access `assets/`:
 
 ```bash
-cd typst
+# From the repo root
 for f in daytime-posture nighttime-posture protected-space-flowchart \
-         shelter-check escalation-readiness mobility-limited-posture \
-         siren-responses siren-responses-with-infant; do
-  typst compile "$f.typ" "../output/$f.pdf"
+         shelter-check escalation-readiness mobility-limited-posture; do
+  typst compile --root . "typst/$f.typ" "output/readiness-postures/$f.pdf"
+done
+
+for f in siren-responses siren-responses-with-infant; do
+  typst compile --root . "typst/$f.typ" "output/siren-responses/$f.pdf"
 done
 ```
 
+## Authors
+
+By **Daniel Rosehill** and **Claude Opus**. Share freely with attribution.
+
 ## Disclaimer
 
-**This is NOT an official government resource.** These SOPs are a personal preparedness aid created from publicly available Home Front Command guidance and personal experience living in a building without a Mamad during wartime. They are not endorsed, verified, or maintained by any government body. Use at your own risk. Always follow instructions from Pikud HaOref and local emergency services. For official guidance, visit [oref.org.il](https://www.oref.org.il).
+**This is NOT an official government resource.** These SOPs are a personal preparedness aid created from publicly available Home Front Command guidance and personal experience living in a building without a Mamad during wartime. Guidance is based on HFC (Pikud HaOref) publications as of **12 March 2026**. They are not endorsed, verified, or maintained by any government body. Use at your own risk. Always follow instructions from Pikud HaOref and local emergency services. For official guidance, visit [oref.org.il](https://www.oref.org.il).
+
+ביחד ננצח | עם ישראל חי

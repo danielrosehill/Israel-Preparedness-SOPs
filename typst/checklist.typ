@@ -5,7 +5,6 @@
   title: "",
   subtitle: "",
   sections: (),
-  footer-note: "",
 ) = {
   set page(
     paper: "a4",
@@ -74,10 +73,21 @@
   }
 
   // Footer
-  if footer-note != "" {
-    v(1fr)
-    line(length: 100%, stroke: 0.5pt + rgb("#cccccc"))
-    v(0.3em)
-    text(size: 7.5pt, fill: rgb("#888888"))[#footer-note]
-  }
+  v(1fr)
+  line(length: 100%, stroke: 0.5pt + rgb("#cccccc"))
+  v(0.2em)
+
+  grid(
+    columns: (1fr, 2.2cm),
+    gutter: 0.4em,
+    [
+      #text(size: 7pt, fill: rgb("#888888"))[
+        *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
+        *DISCLAIMER:* This is NOT an official government resource. Use at your own risk. Guidance based on Home Front Command (Pikud HaOref) publications as of 12 March 2026. For official guidance visit oref.org.il.
+      ]
+    ],
+    align(right + bottom)[
+      #image("../assets/image.png", width: 2cm)
+    ],
+  )
 }

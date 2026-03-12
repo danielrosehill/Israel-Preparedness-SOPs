@@ -35,5 +35,4 @@
       ),
     ),
   ),
-  footer-note: "DISCLAIMER: This is NOT an official government resource. Use at your own risk. Based on Home Front Command (Pikud HaOref) guidelines. For official guidance visit oref.org.il.",
 )
