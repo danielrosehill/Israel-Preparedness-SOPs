@@ -4,6 +4,7 @@
 #checklist(
   title: "Nighttime Readiness Posture",
   subtitle: "Red Alert SOP — For buildings WITHOUT a Mamad / Mamak",
+  sop-id: "SOP-NGT-02",
   sections: (
     (
       name: "Before Bed Setup",

@@ -1,11 +1,43 @@
 // Siren Response Quick Reference — With Infant (0–18 months)
-// One-page A4 card
+// SOP-INF-07
+
+#let page-badge = context {
+  box(
+    fill: rgb("#f5d000"),
+    inset: (x: 0.4em, y: 0.15em),
+    radius: 2pt,
+  )[
+    #text(font: "Roboto", size: 7.5pt, weight: "bold", fill: black)[
+      #counter(page).display() / #counter(page).final().first()
+    ]
+  ]
+}
 
 #set page(
   paper: "a4",
-  margin: (top: 1.6cm, bottom: 1.2cm, left: 1.3cm, right: 1.3cm),
+  margin: (top: 1.6cm, bottom: 2.8cm, left: 1.3cm, right: 1.3cm),
+  footer: context {
+    v(0.4em)
+    line(length: 100%, stroke: 0.5pt + rgb("#ccc"))
+    v(0.2em)
+    grid(
+      columns: (1fr, auto, auto),
+      gutter: 0.4em,
+      [
+        #set text(font: "Roboto", size: 6pt, fill: rgb("#888"))
+        *SOP-INF-07* · *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
+        *DISCLAIMER:* Not an official government resource. Use at your own risk. Based on HFC (Pikud HaOref) publications as of 12 Mar 2026. Official guidance: oref.org.il. Always wait 10 min.
+      ],
+      align(center + horizon)[
+        #page-badge
+      ],
+      align(right + bottom)[
+        #image("../assets/image.png", width: 1.6cm)
+      ],
+    )
+  },
 )
-#set text(font: "Liberation Sans", size: 7.8pt)
+#set text(font: "Roboto", size: 7.8pt)
 #set par(leading: 0.4em)
 
 #align(center)[
@@ -15,6 +47,8 @@
     inset: (x: 1em, y: 0.45em),
     radius: 4pt,
   )[
+    #text(fill: rgb("#f5b7b1"), size: 8pt, weight: "bold")[SOP-INF-07]
+    #v(0.1em)
     #text(fill: white, weight: "bold", size: 14pt)[Siren Response — With Infant]
     #v(0.1em)
     #text(fill: rgb("#f5b7b1"), size: 8pt)[Baby 0–18 months · What to do when the Red Alert sounds]
@@ -30,7 +64,7 @@
   radius: 3pt,
   stroke: 0.5pt + rgb("#f0d080"),
 )[
-  #text(weight: "bold", size: 8pt, fill: rgb("#7d6608"))[Rule #1 in every scenario: PICK UP THE BABY FIRST.]
+  #text(weight: "bold", size: 8pt, fill: rgb("#7d6608"))[Rule \#1 in every scenario: PICK UP THE BABY FIRST.]
   #text(size: 7.5pt, fill: rgb("#7d6608"))[ Hold against your chest. Everything else is secondary. Leave the stroller behind.]
 ]
 
@@ -155,20 +189,3 @@
 ]
 
 ]
-
-#v(1fr)
-#line(length: 100%, stroke: 0.5pt + rgb("#ccc"))
-#v(0.1em)
-#grid(
-  columns: (1fr, 1.8cm),
-  gutter: 0.3em,
-  [
-    #text(size: 6pt, fill: rgb("#888"))[
-      *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
-      *DISCLAIMER:* Not an official government resource. Use at your own risk. Based on HFC (Pikud HaOref) publications as of 12 March 2026. Official guidance: oref.org.il. Always wait 10 min.
-    ]
-  ],
-  align(right + bottom)[
-    #image("../assets/image.png", width: 1.6cm)
-  ],
-)

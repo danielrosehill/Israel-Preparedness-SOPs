@@ -4,6 +4,7 @@
 #checklist(
   title: "Escalation Readiness",
   subtitle: "When the security situation deteriorates — 72-hour preparation",
+  sop-id: "SOP-ESC-03",
   sections: (
     (
       name: "Water & Food (72 Hours Minimum)",

@@ -4,6 +4,7 @@
 #checklist(
   title: "Shelter Check",
   subtitle: "Find and verify your nearest shelters BEFORE you need them",
+  sop-id: "SOP-SHL-04",
   sections: (
     (
       name: "Identify Shelters",

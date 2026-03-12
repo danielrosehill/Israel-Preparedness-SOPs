@@ -1,11 +1,44 @@
 // Protected Space Decision Flowchart
+// SOP-PSP-08
 // Based on Israel Home Front Command (Pikud HaOref) guidelines
+
+#let page-badge = context {
+  box(
+    fill: rgb("#f5d000"),
+    inset: (x: 0.4em, y: 0.15em),
+    radius: 2pt,
+  )[
+    #text(font: "Roboto", size: 7.5pt, weight: "bold", fill: black)[
+      #counter(page).display() / #counter(page).final().first()
+    ]
+  ]
+}
 
 #set page(
   paper: "a4",
-  margin: (top: 1.8cm, bottom: 1.5cm, left: 1.5cm, right: 1.5cm),
+  margin: (top: 1.8cm, bottom: 2.8cm, left: 1.5cm, right: 1.5cm),
+  footer: context {
+    v(0.4em)
+    line(length: 100%, stroke: 0.5pt + rgb("#cccccc"))
+    v(0.2em)
+    grid(
+      columns: (1fr, auto, auto),
+      gutter: 0.4em,
+      [
+        #set text(font: "Roboto", size: 6.5pt, fill: rgb("#888888"))
+        *SOP-PSP-08* · *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
+        *DISCLAIMER:* Not an official government resource. Use at your own risk. Based on HFC (Pikud HaOref) publications as of 12 Mar 2026. Official guidance: oref.org.il.
+      ],
+      align(center + horizon)[
+        #page-badge
+      ],
+      align(right + bottom)[
+        #image("../assets/image.png", width: 2cm)
+      ],
+    )
+  },
 )
-#set text(font: "Liberation Sans", size: 9pt)
+#set text(font: "Roboto", size: 9pt)
 #set par(leading: 0.45em)
 
 // Title
@@ -16,6 +49,8 @@
     inset: (x: 1em, y: 0.5em),
     radius: 4pt,
   )[
+    #text(fill: rgb("#f5b7b1"), size: 8pt, weight: "bold")[SOP-PSP-08]
+    #v(0.1em)
     #text(fill: white, weight: "bold", size: 15pt)[Choosing a Protected Space]
     #v(0.1em)
     #text(fill: rgb("#f5b7b1"), size: 8.5pt)[Decision Flowchart — Home Front Command Guidelines]
@@ -128,20 +163,3 @@
   #h(0.3em)
   #text(size: 8pt)[Kitchen · Bathroom · Toilet · Building entrance lobby · Caravans/prefab · Areas with ceramics, porcelain, or glass]
 ]
-
-#v(1fr)
-#line(length: 100%, stroke: 0.5pt + rgb("#cccccc"))
-#v(0.15em)
-#grid(
-  columns: (1fr, 2.2cm),
-  gutter: 0.4em,
-  [
-    #text(size: 6.5pt, fill: rgb("#888888"))[
-      *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
-      *DISCLAIMER:* This is NOT an official government resource. Use at your own risk. Guidance based on Home Front Command (Pikud HaOref) publications as of 12 March 2026. For official guidance visit oref.org.il.
-    ]
-  ],
-  align(right + bottom)[
-    #image("../assets/image.png", width: 2cm)
-  ],
-)

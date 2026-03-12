@@ -4,6 +4,7 @@
 #checklist(
   title: "Readiness — Elderly / Mobility Limited",
   subtitle: "Red Alert SOP — For buildings WITHOUT a Mamad / Mamak",
+  sop-id: "SOP-MOB-05",
   sections: (
     (
       name: "Protected Space Setup",

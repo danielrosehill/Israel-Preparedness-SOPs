@@ -4,6 +4,7 @@
 #checklist(
   title: "Daytime Readiness Posture",
   subtitle: "Red Alert SOP — For buildings WITHOUT a Mamad / Mamak",
+  sop-id: "SOP-DAY-01",
   sections: (
     (
       name: "On Your Person",
