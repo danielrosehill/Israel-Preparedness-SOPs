@@ -6,19 +6,18 @@
   paper: "a4",
   margin: (top: 1.8cm, bottom: 2.8cm, left: 2cm, right: 2cm),
   footer: context {
-    v(0.4em)
     line(length: 100%, stroke: 0.5pt + rgb("#cccccc"))
-    v(0.2em)
+    v(0.15em)
     grid(
       columns: (1fr, auto),
       gutter: 0.4em,
       [
-        #set text(font: "Roboto", size: 6.5pt, fill: rgb("#888888"))
-        *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
+        #set text(font: "Roboto", size: 6pt, fill: rgb("#888888"))
+        *v1.0* · *Rev:* 12 Mar 2026 · *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
         *DISCLAIMER:* Not an official government resource. Use at your own risk. Based on HFC (Pikud HaOref) publications as of 12 Mar 2026. Official guidance: oref.org.il.
       ],
       align(center)[
-        #image("../assets/image.png", width: 2.5cm)
+        #image("../assets/image.png", width: 1.5cm)
       ],
     )
   },
@@ -86,11 +85,15 @@
 #toc-entry("SOP-6", "Siren Response — Quick Reference", "What to do when the siren sounds — all scenarios (adults)")
 #toc-entry("SOP-7", "Siren Response — With Infant", "Siren response procedures with a baby 0–18 months")
 #toc-entry("SOP-8", "Choosing a Protected Space", "Priority decision flowchart for selecting shelter")
+#toc-entry("SOP-9", "Emergency Supplies Kit", "72-hour supply kit based on HFC guidelines")
+#toc-entry("SOP-10", "Family Emergency Plan", "Family coordination, roles, drills, and communication plan")
+#toc-entry("SOP-11", "Home Preparation", "Securing your home, protected space, and escape routes")
+#toc-entry("SOP-12", "Emergency Contacts & Communication", "Essential numbers, alert channels, information discipline")
 
 #v(0.4em)
 #line(length: 100%, stroke: 0.75pt + rgb("#9bb0d0"))
 #v(0.2em)
 #text(size: 8pt, fill: rgb("#888"))[
-  *Version:* 12 March 2026 · *Total SOPs:* 8 \
+  *v1.0* · *Rev:* 12 March 2026 · *Total SOPs:* 12 \
   Each SOP is designed to be printed individually. This combined document collects all SOPs for reference.
 ]

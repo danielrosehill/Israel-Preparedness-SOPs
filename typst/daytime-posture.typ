@@ -9,7 +9,7 @@
     (
       name: "On Your Person",
       items: (
-        (item: [Phone — volume ON, *location services* ON], response: "CHECKED", note: "Red Alert app installed, configured for your area, notifications enabled"),
+        (item: [*Phone*], response: "CHECKED", actions: ("volume ON", "location services ON", "Red Alert app installed"), note: "Configured for your area, notifications enabled"),
         (item: [Red Alert *browser extension* active], response: "CHECKED", note: "Set to correct alert area; computer not on mute; tested recently"),
         (item: [*Keys* on person], response: "CHECKED", note: "Front door key accessible — do not leave locked inside"),
         (item: [*Wallet* and *ID* (Teudat Zehut)], response: "CHECKED", note: ""),
@@ -22,7 +22,7 @@
       items: (
         (item: [*Baby carrier* by front door], response: "CHECKED", note: "Wrap or structured carrier — hands-free evacuation is far faster than a stroller"),
         (item: [*Go bag* packed and positioned by door], response: "CHECKED", note: ""),
-        (item: [Daily *bag check* completed], response: "CHECKED", note: "Medications, charged torch, water bottle, phone charger, copy of ID"),
+        (item: [Daily *bag check* completed], response: "CHECKED", actions: ("medications", "charged torch", "water bottle", "phone charger", "copy of ID"), note: ""),
         (item: [Hallway and *exit route* clear], response: "VERIFIED", note: "No furniture, shoes, or items blocking path to front door"),
         (item: [*Front door* can be opened quickly], response: "VERIFIED", note: "Not double-locked or chain-latched"),
       ),

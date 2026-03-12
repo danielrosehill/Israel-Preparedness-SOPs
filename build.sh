@@ -14,7 +14,14 @@ typst_files=(
   typst/protected-space-flowchart.typ:output/readiness-postures/protected-space-flowchart.pdf
   typst/siren-responses.typ:output/siren-responses/siren-responses.pdf
   typst/siren-responses-with-infant.typ:output/siren-responses/siren-responses-with-infant.pdf
+  typst/emergency-supplies.typ:output/preparedness/emergency-supplies.pdf
+  typst/family-emergency-plan.typ:output/preparedness/family-emergency-plan.pdf
+  typst/home-preparation.typ:output/preparedness/home-preparation.pdf
+  typst/emergency-contacts.typ:output/preparedness/emergency-contacts.pdf
 )
+
+# Ensure output directories exist
+mkdir -p output/readiness-postures output/siren-responses output/preparedness
 
 for entry in "${typst_files[@]}"; do
   src="${entry%%:*}"
@@ -42,6 +49,10 @@ pdf_order=(
   output/siren-responses/siren-responses.pdf
   output/siren-responses/siren-responses-with-infant.pdf
   output/readiness-postures/protected-space-flowchart.pdf
+  output/preparedness/emergency-supplies.pdf
+  output/preparedness/family-emergency-plan.pdf
+  output/preparedness/home-preparation.pdf
+  output/preparedness/emergency-contacts.pdf
 )
 
 output_combined="output/red-alert-sops-complete.pdf"

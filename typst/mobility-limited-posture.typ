@@ -20,7 +20,7 @@
       name: "Equipment & Supplies",
       items: (
         (item: [*Wheelchair / walker / mobility aid* within reach], response: "CHECKED", note: "Charged if electric; not folded away in a closet"),
-        (item: [*Phone* within arm's reach at all times], response: "CHECKED", note: "Charged, volume ON, Red Alert app active"),
+        (item: [*Phone* within arm's reach at all times], response: "CHECKED", actions: ("charged", "volume ON", "Red Alert app active"), note: ""),
         (item: [*Medications* in protected space or go bag], response: "CHECKED", note: "Especially time-critical: insulin, inhalers, heart medication"),
         (item: [*Chair* positioned in stairwell (if applicable)], response: "CHECKED", note: "For sitting during the 10-minute wait"),
         (item: [*Torch* within reach], response: "CHECKED", note: "Especially important if mobility is limited in the dark"),

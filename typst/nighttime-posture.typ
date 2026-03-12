@@ -10,7 +10,7 @@
       name: "Before Bed Setup",
       items: (
         (item: [*News / situation* scan], response: "CHECKED", note: "Check current threat level — assess if it is safe to sleep at home tonight"),
-        (item: [Phone *charging*, volume ON, location ON], response: "CHECKED", note: "Red Alert app active; Do Not Disturb OFF or alerts whitelisted"),
+        (item: [*Phone*], response: "CHECKED", actions: ("charging", "volume ON", "location ON"), note: "Red Alert app active; Do Not Disturb OFF or alerts whitelisted"),
         (item: [*Clothes* laid out by bed], response: "CHECKED", note: "Full outfit ready to throw on in seconds — shirt, pants, underwear"),
         (item: [*Closed-toe shoes* by bed], response: "CHECKED", note: "Ready to step into immediately; not across the room"),
         (item: [*Torch* within arm's reach], response: "CHECKED", note: "On nightstand — not buried in go bag"),
@@ -23,7 +23,7 @@
       items: (
         (item: [*Baby carrier* by front door], response: "CHECKED", note: "Wrap or structured carrier — you may need both hands free"),
         (item: [*Go bag* packed and positioned by door], response: "CHECKED", note: ""),
-        (item: [*Infant supplies* in go bag], response: "CHECKED", note: "Pacifier, bottle/formula, nappies, wipes, muslin/blanket"),
+        (item: [*Infant supplies* in go bag], response: "CHECKED", actions: ("pacifier", "bottle/formula", "nappies", "wipes", "muslin/blanket"), note: ""),
         (item: [*Medications* in go bag], response: "CHECKED", note: ""),
         (item: [*Power bank* on charge], response: "CHECKED", note: "Near go bag or by front door"),
         (item: [Hallway and *exit route* clear], response: "VERIFIED", note: "Can navigate in the dark without tripping"),

@@ -12,30 +12,44 @@
     radius: 2pt,
   )[
     #text(font: "Roboto", size: 9pt, weight: "bold", fill: black)[
-      #counter(page).display() / #counter(page).final().first()
+      (#counter(page).display()/#counter(page).final().first())
     ]
   ]
 }
 
 #set page(
   paper: "a4",
-  margin: (top: 1.8cm, bottom: 3cm, left: 1.5cm, right: 1.5cm),
+  margin: (top: 1.8cm, bottom: 2.2cm, left: 1.5cm, right: 1.5cm),
+  header: context {
+    set text(font: "Roboto", size: 7.5pt, fill: rgb("#999"))
+    grid(
+      columns: (auto, 1fr, auto),
+      gutter: 0.4em,
+      align(left)[#text(weight: "bold", fill: rgb("#666"))[SOP-8] #h(0.4em) Choosing a Protected Space],
+      [],
+      page-badge,
+    )
+    v(0.1em)
+    line(length: 100%, stroke: 0.4pt + rgb("#ddd"))
+  },
   footer: context {
-    v(0.3em)
     line(length: 100%, stroke: 0.5pt + rgb("#cccccc"))
-    v(0.2em)
+    v(0.15em)
     grid(
       columns: (1fr, auto),
-      gutter: 0.6em,
+      gutter: 0.4em,
       [
-        #set text(font: "Roboto", size: 6.5pt, fill: rgb("#888888"))
-        *SOP-8* · *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
+        #set text(font: "Roboto", size: 6pt, fill: rgb("#888888"))
+        *SOP-8* · *v1.0* · *Rev:* 12 Mar 2026 · *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
         *DISCLAIMER:* Not an official government resource. Use at your own risk. Based on HFC (Pikud HaOref) publications as of 12 Mar 2026. Official guidance: oref.org.il.
       ],
       align(center)[
-        #image("../assets/image.png", width: 2cm)
-        #v(0.1em)
-        #page-badge
+        #grid(
+          columns: (auto, auto),
+          gutter: 0.3em,
+          align(center)[#image("../assets/image.png", width: 1.2cm)],
+          align(center + horizon)[#page-badge],
+        )
       ],
     )
   },

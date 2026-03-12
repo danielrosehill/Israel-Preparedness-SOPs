@@ -30,9 +30,9 @@
     (
       name: "Medical & Documents",
       items: (
-        (item: [*Medications* — 72-hour supply in go bag], response: "CHECKED", note: "Prescriptions, inhalers, insulin, EpiPens + printed prescriptions"),
-        (item: [*First aid kit* stocked], response: "CHECKED", note: "Bandages, antiseptic, painkillers, personal medical supplies"),
-        (item: [Copies of essential *documents* in sealed bag], response: "CHECKED", note: "ID, passport, licence, insurance, medical records, baby vaccination booklet"),
+        (item: [*Medications* — 72-hour supply in go bag], response: "CHECKED", actions: ("prescriptions", "inhalers", "insulin", "EpiPens", "printed prescriptions"), note: ""),
+        (item: [*First aid kit* stocked], response: "CHECKED", actions: ("bandages", "antiseptic", "painkillers", "personal medical supplies"), note: ""),
+        (item: [Copies of essential *documents* in sealed bag], response: "CHECKED", actions: ("ID", "passport", "licence", "insurance", "medical records", "baby vaccination booklet"), note: ""),
       ),
     ),
     (
@@ -41,7 +41,7 @@
         (item: [*Torches* checked, batteries fresh], response: "CHECKED", note: "One per room + one in go bag"),
         (item: [*Blankets* or sleeping bags], response: "CHECKED", note: "For sheltering; nights can be cold"),
         (item: [*Change of clothes* for each family member], response: "CHECKED", note: "In go bag or protected space; include warm layer"),
-        (item: [*Hygiene*: toilet paper, wipes, nappies, sanitiser], response: "CHECKED", note: ""),
+        (item: [*Hygiene* kit], response: "CHECKED", actions: ("toilet paper", "wipes", "nappies", "sanitiser"), note: ""),
         (item: [*Activities* for children], response: "CHECKED", note: "Colouring books, games, stationery — shelter waits are long for kids"),
         (item: [*Fire extinguisher* + smoke detector], response: "CHECKED", note: ""),
         (item: [*Gas supply*], response: "CHECKED", note: "Private: spare tank full. Shared building: tank > half full"),
