@@ -34,6 +34,8 @@ typst_files=(
   typst/go-bag.typ:output/preparedness/go-bag.pdf
   typst/accessibility-equipment.typ:output/preparedness/accessibility-equipment.pdf
   typst/pet-emergency.typ:output/preparedness/pet-emergency.pdf
+  typst/daytime-posture-families.typ:output/readiness-postures/daytime-posture-families.pdf
+  typst/hfc-app-config.typ:output/preparedness/hfc-app-config.pdf
 )
 
 # Ensure output directories exist
@@ -61,7 +63,8 @@ concat_pdfs output/combined/readiness-postures-combined.pdf \
   output/readiness-postures/escalation-readiness.pdf \
   output/readiness-postures/shelter-check.pdf \
   output/readiness-postures/mobility-limited-posture.pdf \
-  output/readiness-postures/protected-space-flowchart.pdf
+  output/readiness-postures/protected-space-flowchart.pdf \
+  output/readiness-postures/daytime-posture-families.pdf
 echo "  -> output/combined/readiness-postures-combined.pdf"
 
 # Siren Responses combined
@@ -78,7 +81,8 @@ concat_pdfs output/combined/preparedness-combined.pdf \
   output/preparedness/emergency-contacts.pdf \
   output/preparedness/go-bag.pdf \
   output/preparedness/accessibility-equipment.pdf \
-  output/preparedness/pet-emergency.pdf
+  output/preparedness/pet-emergency.pdf \
+  output/preparedness/hfc-app-config.pdf
 echo "  -> output/combined/preparedness-combined.pdf"
 
 echo ""
@@ -100,7 +104,9 @@ concat_pdfs output/combined/red-alert-sops-complete.pdf \
   output/preparedness/emergency-contacts.pdf \
   output/preparedness/go-bag.pdf \
   output/preparedness/accessibility-equipment.pdf \
-  output/preparedness/pet-emergency.pdf
+  output/preparedness/pet-emergency.pdf \
+  output/readiness-postures/daytime-posture-families.pdf \
+  output/preparedness/hfc-app-config.pdf
 
 # Clean up intermediate cover
 rm -f output/cover.pdf

@@ -26,7 +26,7 @@
     inset: (x: 0.5em, y: 0.2em),
     radius: 2pt,
   )[
-    #text(font: "Roboto", size: 9pt, weight: "bold", fill: black)[
+    #text(font: "Atkinson Hyperlegible", size: 9pt, weight: "bold", fill: black)[
       (#counter(page).display()/#counter(page).final().first())
     ]
   ]
@@ -34,9 +34,9 @@
 
 #set page(
   paper: "a4",
-  margin: (top: 1.6cm, bottom: 2.2cm, left: 1.3cm, right: 1.3cm),
+  margin: (top: 2.6cm, bottom: 2.2cm, left: 1.3cm, right: 1.3cm),
   header: context {
-    set text(font: "Roboto", size: 7.5pt, fill: rgb("#999"))
+    set text(font: "Atkinson Hyperlegible", size: 7.5pt, fill: rgb("#999"))
     grid(
       columns: (auto, 1fr, auto),
       gutter: 0.4em,
@@ -54,8 +54,8 @@
       columns: (1fr, auto),
       gutter: 0.4em,
       [
-        #set text(font: "Roboto", size: 6pt, fill: rgb("#888"))
-        *SOP-6* · *v2.0* · *Rev:* 18 Mar 2026 · *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
+        #set text(font: "Atkinson Hyperlegible", size: 6pt, fill: rgb("#888"))
+        *SOP-6* · *v2.0* · *Rev:* 19 Mar 2026 · *By:* Daniel Rosehill + Claude Opus · Share freely with attribution \
         *DISCLAIMER:* Not an official government resource. Use at your own risk. Based on HFC (Pikud HaOref) publications as of 12 Mar 2026. Official guidance: oref.org.il. Always wait 10 min.
       ],
       align(center)[
@@ -69,8 +69,23 @@
     )
   },
 )
-#set text(font: "Roboto", size: 7.8pt)
+#set text(font: "Atkinson Hyperlegible", size: 7.8pt)
 #set par(leading: 0.4em)
+
+// Reflective strip area
+#block(
+  width: 100%,
+  height: 0.7cm,
+  stroke: 0.5pt + rgb("#cccccc"),
+  radius: 2pt,
+  inset: (x: 0.4em, y: 0.1em),
+)[
+  #align(center + horizon)[
+    #text(size: 6pt, fill: rgb("#bbb"), tracking: 0.1em)[▲ AFFIX REFLECTIVE STRIP HERE ▲]
+  ]
+]
+
+#v(0.2em)
 
 #align(center)[
   #block(

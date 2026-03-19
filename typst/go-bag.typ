@@ -15,6 +15,7 @@
         (item: [*Phone charger* + power bank (charged)], response: "PACKED", note: ""),
         (item: [*Torch* with fresh batteries], response: "PACKED", note: ""),
         (item: [*Cash*], response: "PACKED", note: "ATMs may be offline"),
+        (item: [*Umbrella* (winter / rainy season)], response: "PACKED", note: "Compact folding umbrella — shelters may be outdoors or a walk away"),
         (item: [*Keys* — spare set], response: "PACKED", note: "House + car"),
       ),
     ),

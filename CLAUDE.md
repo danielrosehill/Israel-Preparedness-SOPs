@@ -51,6 +51,8 @@ build.sh                     # Build orchestrator
 | SOP-13 | go-bag.typ | preparedness |
 | SOP-14 | accessibility-equipment.typ | preparedness |
 | SOP-15 | pet-emergency.typ | preparedness |
+| SOP-16 | daytime-posture-families.typ | readiness-postures |
+| SOP-17 | hfc-app-config.typ | preparedness |
 
 ## Template System
 
@@ -62,7 +64,7 @@ build.sh                     # Build orchestrator
 
 ## Conventions
 
-- SOP IDs are sequential (SOP-1 through SOP-15) — next new SOP is SOP-16
+- SOP IDs are sequential (SOP-1 through SOP-17) — next new SOP is SOP-18
 - File names use kebab-case matching the SOP topic
 - Content is hardcoded in `.typ` files (YAML in `data/` is reference only, not imported)
 - All SOPs include the standard disclaimer about not being official government resources
